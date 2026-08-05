@@ -1,0 +1,45 @@
+name: Content correction or request
+description: Request new content or correct inaccurate public information
+title: "[Content]: "
+labels:
+  - documentation
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page or content location
+      placeholder: URL, heading, or repository path
+    validations:
+      required: true
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request type
+      options:
+        - Factual correction
+        - Missing product information
+        - Translation
+        - Example catalogue content
+        - Compatibility information
+        - Security or data-handling clarification
+        - Broken or outdated link
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current content or problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction or addition
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Supporting sources
+      description: Technical and compatibility claims should cite authoritative sources or released product evidence.

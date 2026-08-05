@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const features=[['Advanced property functions','고급 물성 계산','전문 산업 계산에 필요한 함수군을 일관된 Excel 인터페이스로 제공합니다.'],['Engineering example library','공식 계산 예제','완성 워크북과 계산 설명, 적용 범위와 검증 정보를 함께 제공합니다.'],['Professional operation','상용 환경 운영','개인과 팀이 안정적으로 배포하고 지원받을 수 있는 운영 체계를 준비합니다.']];
+---
+<BaseLayout title="eeFunction Pro"><section class="page-hero section-dark"><div class="container"><div class="eyebrow"><span></span>Professional edition</div><h1>eeFunction Pro</h1><p>반복되는 엔지니어링 계산을 함수, 예제, 검증 정보와 함께 관리하기 위한 전문 Excel 확장 제품입니다. 현재 기능 범위와 라이선스 체계를 설계하고 있습니다.</p><div class="status-banner"><strong>Release status</strong> · In development · 출시일 미정</div></div></section><section class="section container page-content"><div class="split-heading"><div><h2>Pro가 제공하려는 가치</h2></div><p>아래 항목은 출시 준비 방향이며 최종 기능과 제공 방식은 릴리스 노트에서 확정합니다.</p></div><div class="feature-list">{features.map((feature,index)=><article class="feature-card"><small>0{index+1} · {feature[0]}</small><h2>{feature[1]}</h2><p>{feature[2]}</p></article>)}</div></section></BaseLayout>

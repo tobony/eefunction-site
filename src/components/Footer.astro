@@ -1,0 +1,13 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><a class="footer-brand" href="/">eeFunction</a><p>Excel 기반 엔지니어링 계산을 더 빠르고 검토 가능하게 만드는 BRBRSoft의 전문 계산 도구입니다.</p></div>
+    <div><strong>Product</strong><a href="/pro">eeFunction Pro</a><a href="/examples">Examples</a><a href="/pricing">Pricing</a></div>
+    <div><strong>Resources</strong><a href={site.docsUrl}>Documentation</a><a href={site.tutorialRepositoryUrl}>Tutorials</a><a href={site.githubUrl}>GitHub</a></div>
+    <div><strong>Trust</strong><a href="/security">Security</a><a href="/security#data-handling">Data handling</a><a href={site.githubUrl + '/blob/main/SUPPORT.md'}>Support</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© {year} BRBRSoft. All rights reserved.</span><span>eeFunction Pro is currently in development.</span></div>
+</footer>

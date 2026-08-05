@@ -1,0 +1,60 @@
+name: Website bug
+about: Report a reproducible problem in the public eeFunction website
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, license keys, customer workbooks, or security vulnerabilities. Follow SECURITY.md for sensitive reports.
+  - type: input
+    id: url
+    attributes:
+      label: Affected page
+      description: Provide the public URL or repository path.
+      placeholder: https://eefunction.brbrsoft.com/...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the actual behavior and the expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Product pages
+        - Examples
+        - Function catalogue
+        - Pricing or licensing content
+        - Documentation link
+        - Security or legal content
+        - Accessibility
+        - Build or deployment
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: Chrome 150 on Windows 11
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional evidence
+      description: Add screenshots or logs after removing personal and sensitive information.

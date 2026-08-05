@@ -1,0 +1,14 @@
+---
+import { navigation, site } from '../data/site';
+const currentPath = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="eeFunction 홈">
+      <span class="brand-mark">ee</span>
+      <span><strong>{site.name}</strong><small>by {site.company}</small></span>
+    </a>
+    <nav aria-label="주요 메뉴"><ul>{navigation.map((item) => <li><a class:list={[{ active: currentPath === item.href }]} href={item.href}>{item.label}</a></li>)}</ul></nav>
+    <div class="header-actions"><a class="docs-link" href={site.docsUrl}>Docs</a><a class="button button-primary button-small" href="/pro">Pro 살펴보기</a></div>
+  </div>
+</header>

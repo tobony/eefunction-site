@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const topics=[['Data handling','워크북 데이터 처리','현재 Pro 아키텍처가 확정되지 않았으므로 워크북 데이터가 로컬에서만 처리되는지 또는 외부 서비스가 사용되는지 아직 단정하지 않습니다. 출시 전 데이터 전송 항목, 목적, 보존 기간과 하위 처리자를 명시합니다.'],['Office permissions','Office 권한','Manifest에서 요구하는 권한과 각 권한이 필요한 이유를 설명하고 Free와 Pro의 권한 차이가 있다면 별도로 표시합니다.'],['Updates','업데이트와 호환성','지원하는 Excel 플랫폼, 최소 버전, 함수 변경 정책과 중단 예정 기능을 릴리스 노트에서 관리합니다.'],['Responsible reporting','취약점 신고','취약점, 라이선스 우회, 고객 데이터와 관련된 내용은 공개 이슈에 등록하지 않습니다. 정식 비공개 신고 채널은 출시 전 SECURITY 정책에 추가합니다.']];
+---
+<BaseLayout title="Security & Trust"><section class="page-hero section-dark"><div class="container"><div class="eyebrow"><span></span>Security & Trust</div><h1>계산 결과뿐 아니라<br />제품의 동작도 설명합니다.</h1><p>eeFunction Pro의 실제 데이터 흐름과 권한 구조가 확정되는 대로 검증 가능한 형태로 공개할 예정입니다.</p></div></section><section id="data-handling" class="section container page-content"><div class="security-grid">{topics.map((topic,index)=><article class="security-card"><small>0{index+1} · {topic[0]}</small><h2>{topic[1]}</h2><p>{topic[2]}</p></article>)}</div></section></BaseLayout>

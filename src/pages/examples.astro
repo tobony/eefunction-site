@@ -1,0 +1,6 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { engineeringExamples } from '../data/examples';
+import { site } from '../data/site';
+---
+<BaseLayout title="Engineering Examples"><section class="page-hero section-dark"><div class="container"><div class="eyebrow"><span></span>Public example library</div><h1>Engineering Examples</h1><p>완성된 Excel 파일만 배포하지 않고 계산 가정, 함수 목록, 검증 근거까지 함께 관리합니다.</p></div></section><section class="section container page-content"><div class="notice-box"><strong>Repository preparation</strong><p>`eefunction-examples` 저장소와 자동 연동될 카탈로그의 초기 화면입니다. 표시된 항목은 출시 전 예제 후보입니다.</p></div><div class="example-list">{engineeringExamples.map((example,index)=><article class="list-card"><small>0{index+1} · {example.category} · {example.edition}</small><h2>{example.titleKo}</h2><p><code>{example.title}</code></p><p>{example.description}</p><div class="function-list">{example.functions.map(name=><code>{name}</code>)}</div><div class="meta"><span>{example.difficulty}</span><span>{example.status === 'official-preview' ? 'Preview' : 'Planned'}</span></div></article>)}</div><div class="section-cta"><a class="button button-dark" href={site.examplesRepositoryUrl}>예제 저장소 열기</a><a class="text-arrow" href={site.tutorialRepositoryUrl}>단계별 튜토리얼 보기 ↗</a></div></section></BaseLayout>

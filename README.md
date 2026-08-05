@@ -6,13 +6,10 @@ Official public website repository for **eeFunction Free** and **eeFunction Pro*
 
 이 저장소는 eeFunction의 제품 소개, Pro 기능, 가격·라이선스 안내, 보안·데이터 처리 정보, 예제 탐색 화면을 제공하는 공개 웹사이트를 위한 저장소입니다.
 
-## Planned website
+## Websites
 
 - Product site: `https://eefunction.brbrsoft.com`
-- Technical documentation: `https://docs.eefunction.brbrsoft.com`
-- Current documentation: `https://eefunction-doc.pages.dev`
-
-The custom domains above are planned addresses and may not be active yet.
+- Technical documentation: `https://eefunction-doc.brbrsoft.com`
 
 ## Repository boundaries
 
